@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MA UMIYA ONLINE SERVICES</title>
+    <meta name="description" content="Contact MA UMIYA ONLINE SERVICES for all your government and digital service needs. Visit us or call for assistance.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">MA UMIYA ONLINE SERVICES</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work-process.html">Work Process</a></li>
+                <li><a href="past-work.html">Past Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch for all your government and digital service needs</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="page-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Visit Our Shop</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>[Ma Umiya Online Servises Tahsil Choraya] <br>
+                            [Tonkkhurd , Madhya Pradesh - 455116]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919109962424">+91 9109962424</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p><a href="#" onclick="contactWhatsApp()">Chat with us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                            Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="mp-online">MP Online Services</option>
+                                <option value="aadhaar">Aadhaar Update & e-KYC</option>
+                                <option value="pan">PAN Card Services</option>
+                                <option value="certificates">Government Certificates</option>
+                                <option value="land">Land Services (Namantaran/Batwara)</option>
+                                <option value="bills">Bill Payments</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Describe your requirement..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2 class="section-title">Find Us</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <p>🗺️ Google Map will be embedded here</p>
+                        <p>Add your shop location coordinates to display the map</p>
+                        <div class="map-instructions">
+                            <h4>To add Google Map:</h4>
+                            <ol>
+                                <li>Go to Google Maps</li>
+                                <li>Search for your shop address</li>
+                                <li>Click "Share" → "Embed a map"</li>
+                                <li>Copy the iframe code</li>
+                                <li>Replace this placeholder with the iframe</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Services Section -->
+            <div class="quick-services">
+                <h2 class="section-title">Quick Service Requests</h2>
+                <div class="quick-service-buttons">
+                    <button class="quick-btn" onclick="contactForService('Aadhaar Update')">
+                        <span class="quick-icon">🆔</span>
+                        <span>Aadhaar Update</span>
+                    </button>
+                    <button class="quick-btn" onclick="contactForService('PAN Card')">
+                        <span class="quick-icon">💳</span>
+                        <span>PAN Card</span>
+                    </button>
+                    <button class="quick-btn" onclick="contactForService('Income Certificate')">
+                        <span class="quick-icon">📄</span>
+                        <span>Income Certificate</span>
+                    </button>
+                    <button class="quick-btn" onclick="contactForService('Bill Payment')">
+                        <span class="quick-icon">💡</span>
+                        <span>Bill Payment</span>
+                    </button>
+                    <button class="quick-btn" onclick="contactForService('Land Services')">
+                        <span class="quick-icon">🏠</span>
+                        <span>Land Services</span>
+                    </button>
+                    <button class="quick-btn" onclick="contactWhatsApp()">
+                        <span class="quick-icon">💬</span>
+                        <span>WhatsApp Chat</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MA UMIYA ONLINE SERVICES</h3>
+                    <p>Your trusted partner for all government and digital services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 <a href="tel:+919999999999">+91 99999 99999</a></p>
+                    <p>💬 <a href="#" onclick="contactWhatsApp()">WhatsApp Us</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MA UMIYA ONLINE SERVICES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
